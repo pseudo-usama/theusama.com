@@ -9,7 +9,11 @@
     "rewrites": [
       {
         "source": "/usama-resume.pdf",
-        "destination": "/usama-resume.pdf"
+        "destination": "/usama-cv.pdf"
+      },
+      {
+        "source": "/usama-cv.pdf",
+        "destination": "/usama-cv.pdf"
       },
       {
         "source": "**",

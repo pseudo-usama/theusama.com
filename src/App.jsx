@@ -24,7 +24,7 @@ function App() {
         <Link link="https://www.linkedin.com/in/usama-butt/" icon={linkedinIcon} text="Linkedin" newTab />
         <Link link="https://twitter.com/UsamaIftikharB1" icon={twitterIcon} text="Twitter" newTab />
         <Link link="https://github.com/pseudo-usama" icon={githubIcon} text="Github" newTab />
-        <Link link="/usama-resume.pdf" icon={resumeIcon} text="Resume" />
+        <Link link="/usama-cv.pdf" icon={resumeIcon} text="Resume" />
       </nav>
     </div>
     <hr />
