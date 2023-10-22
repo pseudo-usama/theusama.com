@@ -16,6 +16,14 @@
         "destination": "/usama-cv.pdf"
       },
       {
+        "source": "/cv.pdf",
+        "destination": "/usama-cv.pdf"
+      },
+      {
+        "source": "/resume.pdf",
+        "destination": "/usama-cv.pdf"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
