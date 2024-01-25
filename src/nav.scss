@@ -1,0 +1,43 @@
+ul {
+    margin: 1% 5% 0;
+    display: flex;
+    justify-content: end;
+
+    li {
+        margin: 0 13px;
+        list-style: none;
+        font-size: 22px;
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+
+            &.active::after {
+                opacity: 1;
+                transform: translateY(2px);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                opacity: 0;
+                transform: translateY(-4px);
+                background-color: black;
+                transform-origin: bottom right;
+                transition: opacity 0.50s ease-in;
+                transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: translateY(2px);
+                transform-origin: bottom left;
+            }
+        }
+    }
+}

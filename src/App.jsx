@@ -1,60 +1,35 @@
-import linkedinIcon from './Assets/linkedin.svg'
-import githubIcon from './Assets/github.svg'
-import twitterIcon from './Assets/twitter.svg'
-import resumeIcon from './Assets/resume.svg'
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom"
+
+import Nav from './Nav'
+import Home from './Pages/Home'
+import Experience from "./Pages/Experience"
+import Education from './Pages/Education'
+import Skills from './Pages/Skills'
+import PersonalProjects from './Pages/PersonalProjects'
 import './app.scss'
 
-function App() {
-  return <>
-    <div id="home-page">
-      <h1>
-        Usama Iftikhar Butt
-      </h1>
-      {/* <p
-        className="text-xl"
-      >
-        As a Machine learning professional, I bring expertise
-        in <u>Generative modeling</u> and <u>Computer Vision</u>.
-        My forte lies in fine-tuning existing machine learning tools such
-        as <u>Stable Diffusion, transformers and Yolo</u>.
-        I possess a proven track record of delivering innovative and
-        efficient solutions.
-      </p> */}
-      <p className="text-xl">
-        I am a Machine Learning professional with expertise
-        in <u>Generative Modeling</u>, specializing
-        in <u>Natural Language</u> and <u>Computer Vision</u>.
-        I specialize in fine-tuning existing machine learning tools,
-        including <u>GPT-3</u>, <u>BERT</u>, <u>Stable Diffusion</u>, <u>transformers</u> and <u>YOLO</u>.
-        I have a proven track record of delivering innovative and efficient solutions,
-        such as improving sentiment analysis using GPT-3,
-        optimizing image recognition with YOLO and
-        enhancing text classification with BERT.
-      </p>
-      <nav>
-        <Link link="https://www.linkedin.com/in/usama-butt/" icon={linkedinIcon} text="Linkedin" newTab />
-        <Link link="https://twitter.com/UsamaIftikharB1" icon={twitterIcon} text="Twitter" newTab />
-        <Link link="https://github.com/pseudo-usama" icon={githubIcon} text="Github" newTab />
-        <Link link="/usama-cv.pdf" icon={resumeIcon} text="Resume" />
-      </nav>
-    </div>
-    <hr />
-  </>
+
+export default function App() {
+    return <>
+        <BrowserRouter>
+            <Nav />
+            <div className="myapp">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/experience" element={<Experience />} />
+                    <Route path="/education" element={<Education />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/personal-projects" element={<PersonalProjects />} />
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+
+                <hr />
+            </div >
+        </BrowserRouter>
+    </>
 }
-
-
-function Link({ link, icon, text, newTab }) {
-  return (
-    <a href={link} target={newTab ? '_blank' : '_self'}>
-      <img
-        width={30}
-        src={icon}
-        alt={text}
-        title={text}
-      />
-    </a>
-  )
-}
-
-
-export default App
