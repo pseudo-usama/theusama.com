@@ -10,7 +10,7 @@ function App() {
       <h1>
         Usama Iftikhar Butt
       </h1>
-      <p
+      {/* <p
         className="text-xl"
       >
         As a Machine learning professional, I bring expertise
@@ -19,6 +19,17 @@ function App() {
         as <u>Stable Diffusion, transformers and Yolo</u>.
         I possess a proven track record of delivering innovative and
         efficient solutions.
+      </p> */}
+      <p className="text-xl">
+        I am a Machine Learning professional with expertise
+        in <u>Generative Modeling</u>, specializing
+        in <u>Natural Language</u> and <u>Computer Vision</u>.
+        I specialize in fine-tuning existing machine learning tools,
+        including <u>GPT-3</u>, <u>BERT</u>, <u>Stable Diffusion</u>, <u>transformers</u> and <u>YOLO</u>.
+        I have a proven track record of delivering innovative and efficient solutions,
+        such as improving sentiment analysis using GPT-3,
+        optimizing image recognition with YOLO and
+        enhancing text classification with BERT.
       </p>
       <nav>
         <Link link="https://www.linkedin.com/in/usama-butt/" icon={linkedinIcon} text="Linkedin" newTab />
