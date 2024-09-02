@@ -6,29 +6,51 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "/usama-resume.pdf",
-        "destination": "/assets/usama-cv.pdf"
+        "source": "/assets/usama-cv.pdf",
+        "destination": "/usama-resume.pdf",
+        "type": 301
       },
       {
         "source": "/usama-cv.pdf",
-        "destination": "/assets/usama-cv.pdf"
+        "destination": "/usama-resume.pdf",
+        "type": 301
       },
       {
         "source": "/cv.pdf",
-        "destination": "/assets/usama-cv.pdf"
+        "destination": "/usama-resume.pdf",
+        "type": 301
       },
       {
         "source": "/resume.pdf",
-        "destination": "/assets/usama-cv.pdf"
+        "destination": "/usama-resume.pdf",
+        "type": 301
+      },
+      {
+        "source": "/usama-resume",
+        "destination": "/usama-resume.pdf",
+        "type": 301
+      },
+      {
+        "source": "/usama-cv",
+        "destination": "/usama-resume.pdf",
+        "type": 301
       },
       {
         "source": "/cv",
-        "destination": "/assets/usama-cv.pdf"
+        "destination": "/usama-resume.pdf",
+        "type": 301
       },
       {
         "source": "/resume",
+        "destination": "/usama-resume.pdf",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/usama-resume.pdf",
         "destination": "/assets/usama-cv.pdf"
       },
       {
