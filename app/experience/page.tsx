@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Briefcase, Calendar, Clock, Building2 } from "lucide-react";
+import { ArrowLeft, Briefcase, Calendar, Clock, Building2, Workflow, ListChecks, Wrench } from "lucide-react";
 import Link from 'next/link';
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { getBreadcrumbs } from "@/lib/breadcrumbs";
@@ -71,9 +71,29 @@ export default function ExperiencePage() {
                 <div className="space-y-6">
                   <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">{item.description}</p>
                   
+                  {/* Key Projects Section */}
                   <div>
-                    <h4 className="text-base font-semibold text-primary mb-3">Key Achievements</h4>
-                    <div className="bg-muted/50 rounded-lg p-3 sm:p-4 group-hover:bg-muted/80 transition-colors duration-300">
+                    <h4 className="text-base font-semibold text-primary mb-3 flex items-center gap-2">
+                      <Workflow className="h-4 w-4" />
+                      Key Projects
+                    </h4>
+                    <div className="bg-muted/50 rounded-lg p-3 sm:p-4 space-y-4">
+                      {item.keyProjects.map((project, i) => (
+                        <div key={i} className="space-y-1">
+                          <h5 className="font-medium">{project.name}</h5>
+                          <p className="text-sm text-muted-foreground">{project.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Achievements Section */}
+                  <div>
+                    <h4 className="text-base font-semibold text-primary mb-3 flex items-center gap-2">
+                      <ListChecks className="h-4 w-4" />
+                      Key Achievements
+                    </h4>
+                    <div className="bg-muted/50 rounded-lg p-3 sm:p-4">
                       <ul className="grid gap-2 sm:gap-3">
                         {item.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start gap-3">
@@ -84,6 +104,44 @@ export default function ExperiencePage() {
                           </li>
                         ))}
                       </ul>
+                    </div>
+                  </div>
+
+                  {/* Responsibilities Section */}
+                  <div>
+                    <h4 className="text-base font-semibold text-primary mb-3 flex items-center gap-2">
+                      <ListChecks className="h-4 w-4" />
+                      Responsibilities
+                    </h4>
+                    <div className="bg-muted/50 rounded-lg p-3 sm:p-4">
+                      <ul className="grid gap-2 sm:gap-3">
+                        {item.responsibilities.map((responsibility, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <div className="mt-2">
+                              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                            </div>
+                            <span className="text-sm sm:text-base leading-relaxed">{responsibility}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Skills Section */}
+                  <div>
+                    <h4 className="text-base font-semibold text-primary mb-3 flex items-center gap-2">
+                      <Wrench className="h-4 w-4" />
+                      Skills
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.skills.map((skill, i) => (
+                        <span 
+                          key={i}
+                          className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm"
+                        >
+                          {skill}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
