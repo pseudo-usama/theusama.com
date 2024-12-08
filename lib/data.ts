@@ -75,12 +75,14 @@ const data = {
       {
         icon: Github,
         url: "https://github.com/pseudo-usama",
-        label: "GitHub"
+        label: "GitHub",
+        target: "_blank"
       },
       {
         icon: Linkedin,
         url: "https://linkedin.com/in/the-usama",
-        label: "LinkedIn"
+        label: "LinkedIn",
+        target: "_blank"
       },
       {
         icon: Mail,

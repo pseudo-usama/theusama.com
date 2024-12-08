@@ -23,7 +23,7 @@ export default function Header() {
                 className="transition-all duration-300 hover:scale-105"
                 asChild
               >
-                <a href={link.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                <a href={link.url} target={link.target ?? "_self"} rel="noopener noreferrer" className="inline-flex items-center gap-2">
                   <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   {link.label === "Resume" && "Resume"}
                 </a>
